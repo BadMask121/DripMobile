@@ -4,6 +4,6 @@ An app that takes your measurements and preferences of clothing and updates you 
 
 # Technology
 
-React Native
-GraphQL
+React Native,
+GraphQL,
 ElasticSearch
