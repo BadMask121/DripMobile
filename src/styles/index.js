@@ -2,8 +2,9 @@
 import * as React from 'react';
 import {StyleSheet, Dimensions} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {inherits} from '@babel/types';
 
+const width = Dimensions.get('window').width;
+const height = Dimensions.get('window').height;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -17,38 +18,50 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
   },
   bottomTab: {
-    backgroundColor: 'rgba(0,0,0,0.1)',
     position: 'absolute',
-    height: 40,
-    width: Dimensions.get('window').width,
-    top: Dimensions.get('window').height - 40,
+    backgroundColor: 'rgba(0,0,0,0.08)',
+    height: 200,
+    width,
+    top: height - 200,
+    justifyContent: 'center',
   },
   bottomTab__buttons__view: {
     display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignContent: 'center',
-    paddingLeft: 10,
-    paddingRight: 10,
-  },
-  bottomTab__buttons: {
-    position: 'relative',
-    backgroundColor: '#ddd',
-    height: 30,
-    width: 100,
-    maxWidth: 100,
-    minWidth: 20,
-    borderRadius: 5,
-    display: 'flex',
+    height: 110,
+    flexDirection: 'column',
+    justifyContent: 'space-around',
     alignItems: 'center',
-    justifyContent: 'center',
-    alignSelf: 'center',
-    marginTop: 5,
   },
-  bottomTab__buttons__text: {
+  buttons: {
     position: 'relative',
-    // lineHeight: 40,
-    // textAlign: 'center',
+    display: 'flex',
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    // shadowColor: '#000',
+    shadowColor: '#fff',
+    shadowOffset: { width: 1, height: 11 },
+    shadowOpacity: 1,
+    shadowRadius: 10,  
+    elevation: 2
+  },
+  buttons_textView: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+  },
+  __primary: {
+    backgroundColor: 'rgba(33, 33, 33, 0.9)',
+  },
+  __secondary: {
+    backgroundColor: 'rgba(250, 250, 250, 0.9)',
+  },
+  __small: {
+    height: 40,
+    width: 100,
+  },
+  __large: {
+    height: 45,
+    width: 300,
   },
 });
 

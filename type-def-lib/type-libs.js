@@ -7,3 +7,6 @@ declare module 'react-redux' {
 declare module 'react-native/Libraries/NewAppScreen' {
   declare module.exports: any
 }
+declare module 'react-native-paper' {
+  declare module.exports: any
+}
