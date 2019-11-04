@@ -20,7 +20,7 @@ const App: () => React$Node = () => {
 
   return (
     <>
-      <StatusBar barStyle="default" animated={true} />
+      <StatusBar hidden={true} animated={true} />
       <SafeAreaView style={container}>
         <View>
           <Text>s</Text>
