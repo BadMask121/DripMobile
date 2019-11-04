@@ -7,9 +7,9 @@ import {
   Dimensions,
   ScrollView,
   Platform,
-  TouchableHighlight
+  TouchableHighlight,,
 } from 'react-native';
-import { TouchableRipple } from 'react-native-paper';
+import {TouchableRipple} from 'react-native-paper';
 
 import styles from '@app/styles';
 import SplashBottomTab from '@app/components/custom/SplashBottomTab';
@@ -32,20 +32,17 @@ const index: () => React$Node = () => {
         showsVerticalScrollIndicator={true}
         keyboardDismissMode={'interactive'}
         style={styles.splashScreen}>
-        <View style = {
-            {
-                position: 'absolute',
-                 backgroundColor: 'rgba(0,0,0,1)',
-                 height,
-                 width,
-                //  top: height - 200,
-                 justifyContent: 'center',
-            }
-          }>
-          <TouchableHighlight >
-            <Text>
-              Logindsadadsa
-            </Text>
+        <View
+          style={{
+            position: 'absolute',
+            backgroundColor: 'rgba(0,0,0,1)',
+            height,
+            width,
+            //  top: height - 200,
+            justifyContent: 'center',
+          }}>
+          <TouchableHighlight>
+            <Text>Logindsadadsa</Text>
           </TouchableHighlight>
         </View>
         <Image
@@ -74,7 +71,7 @@ const index: () => React$Node = () => {
             text="Sign Up with Email"
             size="large"
             type="secondary"
-            icon = "paper-plane"
+            icon="paper-plane"
             iconColor="rgba(33, 33, 33, 0.9)"
             iconSize={16}
           />
