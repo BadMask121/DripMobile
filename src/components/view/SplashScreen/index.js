@@ -16,7 +16,7 @@ const index: () => React$Node = () => {
         <Text>Hwllo</Text>
       </View>
     </>
-  )
+  );
 };
 
 export default index;
