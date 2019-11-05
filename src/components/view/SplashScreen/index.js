@@ -7,12 +7,13 @@ import {
   Dimensions,
   ScrollView,
   Platform,
-  TouchableHighlight,,
+  TouchableHighlight,
 } from 'react-native';
-import {TouchableRipple} from 'react-native-paper';
 
 import styles from '@app/styles';
-import SplashBottomTab from '@app/components/custom/SplashBottomTab';
+import color from '@app/styles/Colors';
+
+import SplashBottomTab from '@custom/SplashBottomTab';
 import Button from '@custom/Button';
 
 const index: () => React$Node = () => {
@@ -32,19 +33,6 @@ const index: () => React$Node = () => {
         showsVerticalScrollIndicator={true}
         keyboardDismissMode={'interactive'}
         style={styles.splashScreen}>
-        <View
-          style={{
-            position: 'absolute',
-            backgroundColor: 'rgba(0,0,0,1)',
-            height,
-            width,
-            //  top: height - 200,
-            justifyContent: 'center',
-          }}>
-          <TouchableHighlight>
-            <Text>Logindsadadsa</Text>
-          </TouchableHighlight>
-        </View>
         <Image
           source={require('@assets/images/justin-essah-RxnmKqPvW5I-unsplash.jpg')}
           style={{
@@ -62,6 +50,16 @@ const index: () => React$Node = () => {
           accessibilityHint="SplashScreen"
         />
       </ViewScroll>
+      <View style={styles.splashScreenLoginButton}>
+        <Button
+          text="Login"
+          size="small"
+          type="secondary"
+          icon="sign-in"
+          iconColor={color.primaryTransparent}
+          iconSize={16}
+        />
+      </View>
       <SplashBottomTab>
         <View
           style={{
@@ -72,7 +70,7 @@ const index: () => React$Node = () => {
             size="large"
             type="secondary"
             icon="paper-plane"
-            iconColor="rgba(33, 33, 33, 0.9)"
+            iconColor={color.primaryTransparent}
             iconSize={16}
           />
           <Button
@@ -80,7 +78,7 @@ const index: () => React$Node = () => {
             size="large"
             type="primary"
             icon="facebook"
-            iconColor="rgba(250, 250, 250, 0.9)"
+            iconColor={color.secondaryTransparent}
             iconSize={16}
           />
         </View>

@@ -1,7 +1,8 @@
 //@flow
 import * as React from 'react';
 import {StyleSheet, Dimensions} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import color from './Colors'
 
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
@@ -10,12 +11,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'stretch',
-  },
-  splashScreen: {
-    flexDirection: 'row',
-    flex: 1,
-    backgroundColor: 'orange',
-    alignSelf: 'stretch',
   },
   bottomTab: {
     position: 'absolute',
@@ -38,22 +33,38 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'space-around',
-    // shadowColor: '#000',
     shadowColor: '#fff',
-    shadowOffset: { width: 1, height: 11 },
+    shadowOffset: {
+      width: 1,
+      height: 11,
+    },
     shadowOpacity: 1,
-    shadowRadius: 10,  
-    elevation: 2
+    shadowRadius: 10,
+    elevation: 2,
   },
   buttons_textView: {
     flexDirection: 'row',
     justifyContent: 'space-around',
   },
+  splashScreenLoginButton: {
+    position: 'absolute',
+    // backgroundColor: color.primary,
+    height: 40,
+    width,
+    left: width - 105,
+    top: 60,
+  },
+  splashScreen: {
+    flexDirection: 'row',
+    flex: 1,
+    backgroundColor: 'orange',
+    alignSelf: 'stretch',
+  },
   __primary: {
-    backgroundColor: 'rgba(33, 33, 33, 0.9)',
+    backgroundColor: color.primaryTransparent,
   },
   __secondary: {
-    backgroundColor: 'rgba(250, 250, 250, 0.9)',
+    backgroundColor: color.secondaryTransparent,
   },
   __small: {
     height: 40,
